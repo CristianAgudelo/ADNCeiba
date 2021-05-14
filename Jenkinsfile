@@ -1,10 +1,10 @@
 pipeline {
     agent {
         label 'Slave_Induccion'
-      }
+    }
 
       options {
-        	buildDiscarder(logRotator(numToKeepStr: '3'))
+        buildDiscarder(logRotator(numToKeepStr: '3'))
      	disableConcurrentBuilds()
       }
 
@@ -30,7 +30,6 @@ pipeline {
                     ]]
                 ])
             }
-          }
 
           stage('Compile & Unit Tests') {
             steps{
@@ -60,7 +59,7 @@ pipeline {
               }
             }
           }
-        }
+      }
 
         post {
           always {
@@ -83,6 +82,4 @@ pipeline {
             echo 'For example, if the Pipeline was previously failing but is now successful'
           }
         }
-      }
-
 }
