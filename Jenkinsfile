@@ -30,6 +30,7 @@ pipeline {
                     ]]
                 ])
             }
+        }
 
         stage('Compile & Unit Tests') {
             steps{
