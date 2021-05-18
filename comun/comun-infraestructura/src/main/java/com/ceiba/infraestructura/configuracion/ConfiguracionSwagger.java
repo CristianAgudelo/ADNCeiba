@@ -26,6 +26,6 @@ public class ConfiguracionSwagger {
 
 	private static ApiInfo getApiInfo() {
 		return new ApiInfoBuilder().title("Documentacion ApiRest").description("Descripcion de los servicios rest de la aplicacion")
-				.version("1.0").contact(new Contact("Ceiba Software House", null, "contacto@ceiba.com.co")).build();
+				.version("1.0").contact(new Contact("Ceiba Software House", null, "cristian.agudelo@ceiba.com.co")).build();
 	}
 }

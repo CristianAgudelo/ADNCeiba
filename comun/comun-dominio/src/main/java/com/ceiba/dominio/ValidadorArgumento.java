@@ -1,15 +1,19 @@
 package com.ceiba.dominio;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.SimpleFormatter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.ceiba.dominio.excepcion.ExcepcionLongitudValor;
 import com.ceiba.dominio.excepcion.ExcepcionValorInvalido;
 import com.ceiba.dominio.excepcion.ExcepcionValorObligatorio;
+import com.ceiba.dominio.excepcion.ExepcionFechaFormato;
 
 public class ValidadorArgumento {
 	
@@ -57,9 +61,21 @@ public class ValidadorArgumento {
         }
     }
 
-    public static void validarMenor(Long numeroInicial, Long numeroFinal, String mensaje) {
+    public static void validarRango(Integer valor, Integer valorInicial, Integer valorFinal, String mensaje){
+	    if(valor <= valorInicial || valor >= valorFinal){
+	        throw new ExcepcionValorInvalido(mensaje);
+        }
+    }
+
+    public static void validarMenor(Integer numeroInicial, Integer numeroFinal, String mensaje) {
         if (numeroInicial > numeroFinal) {
             throw new ExcepcionValorInvalido(mensaje);
+        }
+    }
+
+    public static void validarMayor(Integer numeroIncial, Integer numeroFinal, String mensaje){
+	    if(numeroIncial < numeroFinal){
+	        throw new ExcepcionValorInvalido(mensaje);
         }
     }
 
@@ -85,6 +101,16 @@ public class ValidadorArgumento {
             }
         }
         return enumObtenido;
+    }
+
+    public static void validarFormatoFecha( String fecha, String formato, String mensaje){
+        SimpleDateFormat formatter = new SimpleDateFormat(formato);
+        formatter.setLenient(false);
+        try {
+            formatter.parse(fecha);
+        } catch (ParseException e) {
+            throw new ExepcionFechaFormato(mensaje);
+        }
     }
 
     public static void validarNumerico(String valor,String mensaje) {

@@ -57,7 +57,7 @@ public class ComandoControladorUsuarioTest {
                 .andExpect(status().isOk());
     }
 
-    @Test
+   /* @Test
     public void eliminar() throws Exception {
         // arrange
         Long id = 2L;
@@ -67,5 +67,5 @@ public class ComandoControladorUsuarioTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
-    }
+    }*/
 }

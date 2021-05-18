@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+    mysqlservice:
+        image: mysql:5.7
+        volumes:
+            - /persistent_mysql:/var/lib/mysql
+        restart: always
+        ports:
+            - 3306:3306
+        environment:
+            MYSQL_ROOT_PASSWORD: admin
+            MYSQL_DATABASE: microservicio
+            MYSQL_USER: admin
+            MYSQL_PASSWORD: admin
