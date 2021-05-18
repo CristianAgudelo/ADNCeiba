@@ -1,6 +1,5 @@
 package com.ceiba.asesoria.model.entidad;
 
-import com.ceiba.usuario.modelo.entidad.Usuario;
 import lombok.Getter;
 
 import java.time.LocalDate;
