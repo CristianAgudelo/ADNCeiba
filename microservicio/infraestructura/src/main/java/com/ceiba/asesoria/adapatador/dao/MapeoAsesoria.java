@@ -2,7 +2,6 @@ package com.ceiba.asesoria.adapatador.dao;
 
 import com.ceiba.asesoria.model.dto.DtoAsesoria;
 import com.ceiba.infraestructura.jdbc.MapperResult;
-import com.ceiba.usuario.adaptador.dao.MapeoUsuario;
 import com.ceiba.usuario.modelo.dto.DtoUsuario;
 import org.springframework.jdbc.core.RowMapper;
 
