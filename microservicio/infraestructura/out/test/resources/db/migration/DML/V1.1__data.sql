@@ -1,0 +1,1 @@
+insert into usuario(nombre) values('test')

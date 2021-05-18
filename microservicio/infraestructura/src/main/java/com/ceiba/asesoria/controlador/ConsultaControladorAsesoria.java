@@ -22,9 +22,9 @@ public class ConsultaControladorAsesoria {
         this.manejadorListarAsesorias = manejadorListarAsesorias;
     }
 
-    @GetMapping("/{nombre}")
+    @GetMapping("/{nombre}/{mes}")
     @ApiOperation("Listar asesorias")
-    public List<DtoAsesoria> listar(@PathVariable String nombre) {
-        return manejadorListarAsesorias.ejecutar(nombre);
+    public List<DtoAsesoria> listar(@PathVariable String nombre, @PathVariable Integer mes) {
+        return manejadorListarAsesorias.ejecutar(nombre, mes);
     }
 }

@@ -31,7 +31,7 @@ public class ServicioCrearAsesoria {
         if (!repositorioUsuario.existe(asesoria.getAsesor())) {
             throw new ExepcionNoExisteAsesor(NO_EXISTE_ASESOR);
         }
-        DtoUsuario dtoUsuario = daoUsuario.buscarPorid(asesoria.getId());
+        DtoUsuario dtoUsuario = daoUsuario.buscarPorid(asesoria.getAsesor());
         daoAsesoria.listarPorAsesor(dtoUsuario.getNombre()).forEach(dtoAsesoria -> {
             if (validarHoraValida(asesoria.getHoraFin(), dtoAsesoria.getHoraInicio(), dtoAsesoria.getHoraFin())
                     || validarHoraValida(asesoria.getHoraInicio(), dtoAsesoria.getHoraInicio(), dtoAsesoria.getHoraFin())) {
