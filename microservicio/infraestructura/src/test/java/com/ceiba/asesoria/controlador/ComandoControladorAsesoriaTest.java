@@ -36,7 +36,7 @@ public class ComandoControladorAsesoriaTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(asesoria)))
                 .andExpect(status().isOk())
-                .andExpect(content().json("{'valor': 2}"));
+                .andExpect(content().json("{'valor': 3}"));
     }
 
     @Test

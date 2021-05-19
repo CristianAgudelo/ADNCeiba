@@ -36,7 +36,7 @@ public class ConsultaControladorAsesoriaTest {
         mocMvc.perform(get("/asesorias/test/12")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$", hasSize(1)))
+                .andExpect(jsonPath("$", hasSize(2)))
                 .andExpect(jsonPath("$[0].asesor.nombre", is("test")));
     }
 

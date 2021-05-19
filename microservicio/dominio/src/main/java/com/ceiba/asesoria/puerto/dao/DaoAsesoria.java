@@ -7,14 +7,6 @@ import java.util.List;
 public interface DaoAsesoria {
 
     /**
-     * Permite listar Asesorias
-     * @return los Asesorias
-     */
-
-    List<DtoAsesoria> listar();
-
-
-    /**
      * Permite listar Asesorias por nombre de asesor
      * @Param nombreAsesor
      * @return los Asesorias

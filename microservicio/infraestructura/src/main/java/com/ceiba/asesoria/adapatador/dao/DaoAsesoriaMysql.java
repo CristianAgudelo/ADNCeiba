@@ -28,11 +28,6 @@ public class DaoAsesoriaMysql implements DaoAsesoria {
     }
 
     @Override
-    public List<DtoAsesoria> listar() {
-        return customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoAsesoria());
-    }
-
-    @Override
     public List<DtoAsesoria> listarPorAsesor(String nombreAsesor) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
         paramSource.addValue("nombre", nombreAsesor);
