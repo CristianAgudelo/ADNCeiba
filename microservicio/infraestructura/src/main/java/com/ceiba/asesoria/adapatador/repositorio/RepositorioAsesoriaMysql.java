@@ -48,12 +48,4 @@ public class RepositorioAsesoriaMysql implements RepositorioAsesoria {
         customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlEliminar, paramSource);
     }
 
-    @Override
-    public boolean existe(Long id) {
-        MapSqlParameterSource paramSource = new MapSqlParameterSource();
-        paramSource.addValue("id", id);
-        return customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePorId,
-                paramSource,
-                Boolean.class);
-    }
 }

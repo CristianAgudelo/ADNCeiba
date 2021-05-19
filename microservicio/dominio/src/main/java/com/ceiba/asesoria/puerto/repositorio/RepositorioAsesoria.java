@@ -26,12 +26,4 @@ public interface RepositorioAsesoria {
      */
     void eliminar(Long id);
 
-    /**
-     * Permite validar si existe una
-     *
-     * @param id
-     * @return si existe o no
-     */
-    boolean existe(Long id);
-
 }
