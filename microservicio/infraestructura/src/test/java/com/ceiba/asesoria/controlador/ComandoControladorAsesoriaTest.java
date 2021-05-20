@@ -20,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = ApplicationMock.class)
-@WebMvcTest(ComandoControladorUsuario.class)
+@WebMvcTest(ComandoControladorAsesoria.class)
 public class ComandoControladorAsesoriaTest {
 
     @Autowired
